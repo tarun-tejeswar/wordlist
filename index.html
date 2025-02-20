@@ -11,17 +11,17 @@
         <h1>Random Word Generator</h1>
         
         <label for="prefix">Enter prefix:</label>
-        <input type="text" id="prefix" value="Shashank@">
+        <input type="text" id="prefix" placeholder="Enter Prefix (Tarun@)">
 
         <label for="wordCount">Enter number of words:</label>
-        <input type="number" id="wordCount" value="10000" min="1">
+        <input type="number" id="wordCount" placeholder="Enter Range of Numbers (1000)" min="1">
 
         <label for="digits">Enter allowed digits:</label>
-        <input type="text" id="digits" value="0123456789" oninput="validateDigits(this)">
+        <input type="text" id="digits" placeholder="Enter Random Numbers (0123456789)" oninput="validateDigits(this)">
         <small id="digitWarning" style="color: red; display: none;">Only numbers are allowed!</small>
 
         <label for="filename">Enter filename:</label>
-        <input type="text" id="filename" value="random_words">
+        <input type="text" id="filename" placeholder="Enter File Name (wordlist)">
 
         <button onclick="generateWords()">Generate & Download</button>
 
