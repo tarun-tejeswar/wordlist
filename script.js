@@ -1,3 +1,29 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const toggleButton = document.getElementById("toggleMode");
+    const body = document.body;
+
+    // Load dark mode preference
+    if (localStorage.getItem("darkMode") === "enabled") {
+        body.classList.add("dark-mode");
+        toggleButton.innerText = "☀️ Light Mode";
+    }
+
+    // Toggle Dark Mode
+    toggleButton.addEventListener("click", function() {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("darkMode", "enabled");
+            toggleButton.innerText = "☀️ Light Mode";
+        } else {
+            localStorage.setItem("darkMode", "disabled");
+            toggleButton.innerText = "🌙 Dark Mode";
+        }
+    });
+});
+
+
+
 function generateWords() {
     let prefix = document.getElementById("prefix").value.trim();
     let count = parseInt(document.getElementById("wordCount").value);
@@ -6,8 +32,10 @@ function generateWords() {
     let fileSizeElement = document.getElementById("fileSize");
 
     if (prefix === "" || count <= 0 || digits.length === 0 || filename === "") {
-        alert("Please enter valid values for all fields.");
-        return;
+        prefix = "Name@";
+        count = 10000;
+        digits = "0123456789";
+        filename = "wordlist";
     }
 
     let words = new Set();
@@ -39,5 +67,5 @@ function generateWords() {
     // Hide file size after 5 seconds
     setTimeout(() => {
         fileSizeElement.style.display = "none";
-    }, 3000);
+    }, 5000);
 }
