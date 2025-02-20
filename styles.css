@@ -1,0 +1,108 @@
+/* 🌞 Light Mode (Default) */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #e3f2fd, #ffffff);
+    transition: background 0.5s ease-in-out;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 360px;
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+/* Input Fields */
+input {
+    width: 90%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Focus Effect */
+input:focus {
+    outline: none;
+    border-color: #6200ea;
+    box-shadow: 0 0 8px rgba(98, 0, 234, 0.6);
+}
+
+/* Buttons */
+button {
+    margin-top: 15px;
+    padding: 12px;
+    background: linear-gradient(135deg, #6200ea, #3700b3);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #3700b3, #6200ea);
+    transform: scale(1.05);
+}
+
+/* File Size Text */
+#fileSize {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 🌙 Futuristic Dark Mode */
+.dark-mode {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+}
+
+.dark-mode .container {
+    background: rgba(30, 30, 30, 0.9);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.15);
+}
+
+.dark-mode input {
+    background: #333;
+    color: #e0e0e0;
+    border: 1px solid #666;
+}
+
+.dark-mode input:focus {
+    border-color: #bb86fc;
+    box-shadow: 0 0 8px rgba(187, 134, 252, 0.6);
+}
+
+.dark-mode button {
+    background: linear-gradient(135deg, #bb86fc, #6200ea);
+}
+
+.dark-mode button:hover {
+    background: linear-gradient(135deg, #6200ea, #bb86fc);
+}
+
+.dark-mode #fileSize {
+    color: #bbbbbb;
+}
